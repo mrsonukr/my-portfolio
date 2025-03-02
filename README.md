@@ -14,9 +14,9 @@ A fully animated and interactive portfolio website built with modern web technol
 - **Hosting:** GitHub Pages / Vercel / Netlify  
 
 ## 📷 Preview  
-![Portfolio Preview](screenshot.png) *(Add a screenshot here!)*  
+![Portfolio Preview](/assets/images/screenshot.png) *(Add a screenshot here!)*  
 
 ## 📌 Setup & Installation  
 1. **Clone the repository:**  
    ```sh
-   git clone https://github.com/yourusername/my-portfolio.git
+   git clone https://github.com//mrsonukr/my-portfolio.git
