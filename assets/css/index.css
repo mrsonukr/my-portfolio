@@ -463,6 +463,10 @@ h1 {
 
 /* mobile size */
 @media screen and (max-width: 768px) {
+    .mouse-follower {
+        display: none;
+    }
+
     nav {
         .mobile {
             display: flex;
