@@ -3,13 +3,11 @@
     from {
         opacity: 0;
         transform: translateY(10px);
-        /* Moves element down by 20px */
     }
 
     to {
         opacity: 1;
         transform: translateY(0);
-        /* Moves element back to its original position */
     }
 }
 
@@ -17,13 +15,11 @@
     from {
         opacity: 0;
         transform: translateX(-10px);
-        /* Moves element down by 20px */
     }
 
     to {
         opacity: 1;
         transform: translateX(0);
-        /* Moves element back to its original position */
     }
 }
 
