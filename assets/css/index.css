@@ -556,8 +556,10 @@ h1 {
     }
 }
 
-.hamburger {
-    cursor: none;
+.hamburger,
+.hamburger * {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 .hamburger input {
