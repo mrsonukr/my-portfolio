@@ -113,3 +113,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all items that should animate
+  const items = document.querySelectorAll('.aos');
+
+  // Set observer options: observe when 10% of the element is visible
+  const observerOptions = {
+    root: null,       // Use the viewport as the container
+    threshold: 0.1
+  };
+
+  // Create the observer with a callback
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the 'visible' class when the element enters the viewport
+        entry.target.classList.add('visible');
+        // Optionally, unobserve the element if you don't need to animate it again
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe each item
+  items.forEach(item => observer.observe(item));
+});

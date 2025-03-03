@@ -1,6 +1,5 @@
 :root {
     --color-surface-white: #000000;
-    --color-just-black: #000;
     --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
