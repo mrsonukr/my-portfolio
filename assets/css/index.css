@@ -18,6 +18,9 @@
 }
 
 body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
     margin-top: 80px;
     font-family: var(--font);
 }
@@ -70,6 +73,7 @@ nav {
 /* footer */
 
 footer {
+    width: 100%;
     background-color: var(--black);
     display: flex;
     flex-direction: column;
@@ -286,6 +290,7 @@ footer {
 }
 
 .skill-box {
+    max-width: 1920px;
     margin: 0 0 50px;
     background-color: var(--black);
     padding: 0 32px 32px;
@@ -486,6 +491,18 @@ h1 {
     stroke-dasharray: 192 64 192 64;
     stroke-dashoffset: 0;
     animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1550px) {
+    .hero {
+        height: 90vh;
+    }
+}
+
+@media screen and (min-width: 1551px) {
+    .hero {
+        height: 600px;
+    }
 }
 
 /* mobile size */
