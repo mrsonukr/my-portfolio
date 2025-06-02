@@ -10,6 +10,9 @@ import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
+    // Register GSAP with MouseFollower
+    MouseFollower.registerGSAP(gsap);
+
     // Initialize MouseFollower
     new MouseFollower({
       el: document.querySelector(".mouse-follower"),
