@@ -1,9 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* animations */
+:root {
+  --green: #00ff00;
+  --link: #475467;
+  --black: #101828;
+  --font: 'Inter', sans-serif;
+  --border-color: #e4e7ec;
+}
+
+@layer components {
+  .button {
+    @apply inline-flex items-center bg-transparent border-none rounded-[6.25rem] text-black cursor-pointer text-base font-semibold gap-[0.363636em] justify-center -tracking-[0.01em] leading-[1.04545] overflow-hidden py-[0.9375rem] px-6 relative no-underline break-words;
+  }
+
+  .button--stroke:after {
+    @apply content-[''] absolute inset-0 rounded-[6.25rem] pointer-events-none;
+  }
+
+  .button__label {
+    @apply relative text-center transition-colors duration-[50ms];
+  }
+
+  .button__flair {
+    @apply absolute inset-0 pointer-events-none;
+  }
+
+  .button--stroke .button__flair {
+    @apply transform scale-0 origin-[0_0] will-change-transform;
+  }
+
+  .button__flair:before {
+    @apply content-[''] absolute top-0 left-0 w-[170%] aspect-square bg-black rounded-full -translate-x-1/2 -translate-y-1/2;
+  }
+}
+
 @keyframes fade {
     from {
         opacity: 0;
@@ -92,39 +126,10 @@
     }
 }
 
-/* Button styles */
-.button {
-    @apply inline-flex items-center justify-center gap-[0.363636em] px-6 py-[0.9375rem] rounded-[6.25rem] bg-transparent cursor-pointer overflow-hidden relative text-base font-semibold tracking-[-0.01em] leading-[1.04545] break-words no-underline;
-}
-
-.button--stroke:after {
-    content: "";
-    @apply absolute inset-0 rounded-[6.25rem] pointer-events-none;
-}
-
-.button__label {
-    @apply relative text-center transition-colors duration-50;
-}
-
-.button__flair {
-    @apply absolute inset-0 pointer-events-none;
-}
-
-.button--stroke .button__flair {
-    @apply scale-0 origin-[0_0] will-change-transform;
-}
-
-.button__flair:before {
-    content: "";
-    @apply absolute top-0 left-0 w-[170%] aspect-square bg-black rounded-full -translate-x-1/2 -translate-y-1/2;
-}
-
-/* Mouse follower */
 .mouse-follower {
     @apply w-2.5 h-2.5 bg-green rounded-full pointer-events-none fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 z-[1000];
 }
 
-/* Social media icons */
 .social-m {
     @apply flex justify-center items-center gap-2 scale-[0.8];
 }
@@ -145,7 +150,6 @@
     @apply h-full;
 }
 
-/* Animations */
 .aos {
     @apply opacity-0 translate-y-5 transition-all duration-600 ease-in-out;
 }
