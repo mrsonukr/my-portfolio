@@ -36,6 +36,38 @@
   .button__flair:before {
     @apply content-[''] absolute top-0 left-0 w-[170%] aspect-square bg-black rounded-full -translate-x-1/2 -translate-y-1/2;
   }
+
+  .mouse-follower {
+    @apply w-2.5 h-2.5 bg-green rounded-full pointer-events-none fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 z-[1000];
+  }
+
+  .social-m {
+    @apply flex justify-center items-center gap-2 scale-[0.8];
+  }
+
+  .social-m .icon-content {
+    @apply mx-2.5 relative;
+  }
+
+  .social-m .icon-content a {
+    @apply relative overflow-hidden flex justify-center items-center w-[50px] h-[50px] rounded-full text-white transition-all duration-300 ease-in-out;
+  }
+
+  .social-m .icon-content a .filled {
+    @apply absolute bottom-0 left-0 w-full h-0 transition-all duration-300 ease-in-out;
+  }
+
+  .social-m .icon-content a:hover .filled {
+    @apply h-full;
+  }
+
+  .aos {
+    @apply opacity-0 translate-y-5 transition-all duration-600 ease-in-out;
+  }
+
+  .aos.visible {
+    @apply opacity-100 translate-y-0;
+  }
 }
 
 @keyframes fade {
@@ -124,36 +156,4 @@
     100% {
         transform: translateY(0) rotate(90deg);
     }
-}
-
-.mouse-follower {
-    @apply w-2.5 h-2.5 bg-green rounded-full pointer-events-none fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 z-[1000];
-}
-
-.social-m {
-    @apply flex justify-center items-center gap-2 scale-[0.8];
-}
-
-.social-m .icon-content {
-    @apply mx-2.5 relative;
-}
-
-.social-m .icon-content a {
-    @apply relative overflow-hidden flex justify-center items-center w-[50px] h-[50px] rounded-full text-white transition-all duration-300 ease-in-out;
-}
-
-.social-m .icon-content a .filled {
-    @apply absolute bottom-0 left-0 w-full h-0 transition-all duration-300 ease-in-out;
-}
-
-.social-m .icon-content a:hover .filled {
-    @apply h-full;
-}
-
-.aos {
-    @apply opacity-0 translate-y-5 transition-all duration-600 ease-in-out;
-}
-
-.aos.visible {
-    @apply opacity-100 translate-y-0;
 }
