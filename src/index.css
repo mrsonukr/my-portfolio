@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* animations */
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeleft {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        filter: brightness(2);
+    }
+    to {
+        opacity: 1;
+        filter: brightness(1);
+    }
+}
+
+@keyframes spin_4991 {
+    10% {
+        transform: translateY(-102%);
+    }
+    25% {
+        transform: translateY(-100%);
+    }
+    35% {
+        transform: translateY(-202%);
+    }
+    50% {
+        transform: translateY(-200%);
+    }
+    60% {
+        transform: translateY(-302%);
+    }
+    75% {
+        transform: translateY(-300%);
+    }
+    85% {
+        transform: translateY(-402%);
+    }
+    100% {
+        transform: translateY(-400%);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes jump7456 {
+    15% {
+        border-bottom-right-radius: 3px;
+    }
+    25% {
+        transform: translateY(9px) rotate(22.5deg);
+    }
+    50% {
+        transform: translateY(18px) scale(1, .9) rotate(45deg);
+        border-bottom-right-radius: 40px;
+    }
+    75% {
+        transform: translateY(9px) rotate(67.5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(90deg);
+    }
+}
+
+/* Button styles */
+.button {
+    @apply inline-flex items-center justify-center gap-[0.363636em] px-6 py-[0.9375rem] rounded-[6.25rem] bg-transparent cursor-pointer overflow-hidden relative text-base font-semibold tracking-[-0.01em] leading-[1.04545] break-words no-underline;
+}
+
+.button--stroke:after {
+    content: "";
+    @apply absolute inset-0 rounded-[6.25rem] pointer-events-none;
+}
+
+.button__label {
+    @apply relative text-center transition-colors duration-50;
+}
+
+.button__flair {
+    @apply absolute inset-0 pointer-events-none;
+}
+
+.button--stroke .button__flair {
+    @apply scale-0 origin-[0_0] will-change-transform;
+}
+
+.button__flair:before {
+    content: "";
+    @apply absolute top-0 left-0 w-[170%] aspect-square bg-black rounded-full -translate-x-1/2 -translate-y-1/2;
+}
+
+/* Mouse follower */
+.mouse-follower {
+    @apply w-2.5 h-2.5 bg-green rounded-full pointer-events-none fixed top-0 left-0 -translate-x-1/2 -translate-y-1/2 z-[1000];
+}
+
+/* Social media icons */
+.social-m {
+    @apply flex justify-center items-center gap-2 scale-[0.8];
+}
+
+.social-m .icon-content {
+    @apply mx-2.5 relative;
+}
+
+.social-m .icon-content a {
+    @apply relative overflow-hidden flex justify-center items-center w-[50px] h-[50px] rounded-full text-white transition-all duration-300 ease-in-out;
+}
+
+.social-m .icon-content a .filled {
+    @apply absolute bottom-0 left-0 w-full h-0 transition-all duration-300 ease-in-out;
+}
+
+.social-m .icon-content a:hover .filled {
+    @apply h-full;
+}
+
+/* Animations */
+.aos {
+    @apply opacity-0 translate-y-5 transition-all duration-600 ease-in-out;
+}
+
+.aos.visible {
+    @apply opacity-100 translate-y-0;
+}
